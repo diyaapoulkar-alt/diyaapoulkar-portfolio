@@ -453,7 +453,7 @@ export default function Home() {
 
     {/* LINKEDIN */}
     <a
-      href="https://www.linkedin.com/in/diya-poulkar"
+      href="https://www.linkedin.com/in/diya-poulkar-05721037a/" 
       target="_blank"
       className="group px-6 py-4 rounded-2xl bg-white/5 border border-white/10 backdrop-blur hover:border-blue-400/50 transition flex items-center gap-3"
     >
