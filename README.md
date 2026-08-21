@@ -7,7 +7,7 @@
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
 [![Framer Motion](https://img.shields.io/badge/Framer_Motion-12.40-0055FF?style=for-the-badge&logo=framer&logoColor=white)](https://www.framer.com/motion/)
 
-A modern, high-performance, dark-themed developer portfolio website built with **Next.js 16 (App Router)**, **React 19**, **TypeScript**, **Tailwind CSS v4**, and **Framer Motion**. Features responsive design, glassmorphism UI cards, smooth page scroll, and custom cursor lighting effects.
+A modern, high-performance, white-themed developer portfolio website built with **Next.js 16 (App Router)**, **React 19**, **TypeScript**, **Tailwind CSS v4**, and **Framer Motion**. Features a Palomino-inspired cinematic opening intro screen, floating glassmorphism pill navigation bar, responsive design, and smooth hover animations.
 
 🚀 **Live Portfolio Website**: [https://diyaapoulkar-portfolio.vercel.app](https://diyaapoulkar-portfolio.vercel.app/)
 
@@ -15,8 +15,10 @@ A modern, high-performance, dark-themed developer portfolio website built with *
 
 ## ✨ Features
 
-- 🎨 **Modern Glassmorphism UI**: Sleek dark theme featuring translucent glassmorphic components, vibrant gradient accents, and custom cursor illumination.
-- ⚡ **Next.js 16 App Router & React 19**: Powered by the latest Next.js features for maximum performance and server-side optimization.
+- 🎬 **Cinematic Opening Preloader**: Full-screen entrance animation displaying **DIYA POULKAR** in bold typography with expanding geometric frame lines and a smooth curtain reveal.
+- 🎨 **Modern White Theme UI**: High-contrast, clean light theme with subtle slate cards, ambient purple/indigo background glows, and interactive cursor lighting.
+- 🧭 **Floating Pill Navigation Bar**: Centered floating pill navbar inspired by *rbp-portfolio* featuring animated active tab indicators.
+- ⚡ **Next.js 16 App Router & React 19**: Built on the latest Next.js stack for server optimization and rapid page loads.
 - 🎭 **Smooth Motion & Animations**: Entrance animations, hover effects, and interactive UI dynamics built using `framer-motion`.
 - 📱 **100% Fully Responsive**: Seamless viewing experience tailored for desktop, tablet, and mobile displays.
 - 🧩 **Modular Section Architecture**:

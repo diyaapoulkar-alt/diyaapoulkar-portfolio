@@ -2,170 +2,154 @@
 
 import Navbar from "@/components/Navbar";
 import CursorGlow from "@/components/CursorGlow";
+import IntroPreloader from "@/components/IntroPreloader";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
 const fadeUp = {
-  hidden: { opacity: 0, y: 40 },
+  hidden: { opacity: 0, y: 30 },
   show: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.7 },
+    transition: { duration: 0.6, ease: "easeOut" as const },
   },
 };
 
 export default function Home() {
   return (
-    <main className="min-h-screen text-white overflow-x-hidden bg-black">
+    <main className="min-h-screen text-slate-900 overflow-x-hidden bg-slate-50 selection:bg-purple-100 selection:text-purple-900">
+      {/* PALOMINO-STYLE CINEMATIC INTRO PRELOADER */}
+      <IntroPreloader />
 
+      {/* LIGHT-THEME CURSOR GLOW & FLOATING PILL NAVBAR */}
       <CursorGlow />
       <Navbar />
 
-      {/* HERO */}
-<section
-  id="home"
-  className="min-h-screen flex items-center justify-center px-6 relative overflow-hidden pt-28"
->
-
-  {/* BACKGROUND GLOW */}
-  <div className="absolute inset-0">
-
-    <div className="absolute w-96 h-96 bg-purple-600/20 blur-3xl rounded-full top-10 left-10 animate-pulse" />
-
-    <div className="absolute w-96 h-96 bg-blue-600/20 blur-3xl rounded-full bottom-10 right-10 animate-pulse" />
-
-  </div>
-
-  {/* TOP CENTER TEXT */}
-  <div className="absolute top-28 left-1/2 -translate-x-1/2 z-20">
-
-    <p className="text-gray-400 tracking-[0.3em] uppercase text-sm text-center whitespace-nowrap">
-      Computer Science Student • Developer • Problem Solver
-    </p>
-
-  </div>
-
-  <motion.div
-    initial="hidden"
-    animate="show"
-    variants={fadeUp}
-    className="relative z-10 max-w-7xl w-full grid md:grid-cols-2 gap-14 items-center"
-  >
-
-    {/* LEFT SIDE IMAGE */}
-    <div className="flex justify-center md:justify-start">
-
-      <div className="relative">
-
-        {/* Glow */}
-        <div className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 blur-2xl opacity-40 animate-pulse" />
-
-        {/* IMAGE */}
-        <div className="relative w-[320px] h-[320px] md:w-[380px] md:h-[380px] rounded-full overflow-hidden border-4 border-white/10 shadow-2xl">
-
-          <Image
-            src="/diya.jpeg"
-            alt="Diya Poulkar"
-            fill
-            className="object-cover"
-          />
-
+      {/* HERO SECTION */}
+      <section
+        id="home"
+        className="min-h-screen flex items-center justify-center px-6 relative overflow-hidden pt-32 pb-20"
+      >
+        {/* BACKGROUND AMBIENT GLOWS */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute w-[500px] h-[500px] bg-purple-200/50 blur-3xl rounded-full top-10 left-1/4 animate-pulse" />
+          <div className="absolute w-[500px] h-[500px] bg-indigo-200/40 blur-3xl rounded-full bottom-10 right-1/4 animate-pulse delay-700" />
         </div>
 
-      </div>
-
-    </div>
-
-    {/* RIGHT SIDE TEXT */}
-    <div>
-
-      <h1 className="text-6xl md:text-7xl font-bold leading-tight">
-
-        Hi, I’m{" "}
-
-        <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400">
-          Diya Poulkar
-        </span>
-
-      </h1>
-
-      <p className="mt-7 text-gray-300 text-lg leading-relaxed max-w-xl">
-
-        Aspiring software engineer passionate about software development,
-        machine learning, and building impactful technology solutions
-        with clean and efficient systems.
-
-      </p>
-
-      {/* BUTTONS */}
-      <div className="mt-10 flex gap-4 flex-wrap">
-
-        <a
-          href="#projects"
-          className="px-7 py-3 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 hover:scale-105 transition shadow-lg shadow-purple-500/20"
+        <motion.div
+          initial="hidden"
+          animate="show"
+          variants={fadeUp}
+          className="relative z-10 max-w-7xl w-full grid md:grid-cols-2 gap-12 items-center"
         >
-          View Projects
-        </a>
+          {/* LEFT PROFILE IMAGE */}
+          <div className="flex justify-center md:justify-start">
+            <div className="relative group">
+              {/* Outer soft glow ring */}
+              <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-purple-500 via-pink-500 to-indigo-500 blur-xl opacity-30 group-hover:opacity-50 transition duration-500" />
 
-        <a
-          href="/diya_poulkar_resume.pdf"
-          className="px-7 py-3 rounded-full border border-white/20 hover:bg-white/10 transition"
-        >
-          Download Resume
-        </a>
+              {/* Image Container */}
+              <div className="relative w-[300px] h-[300px] md:w-[380px] md:h-[380px] rounded-full overflow-hidden border-4 border-white shadow-2xl shadow-slate-900/10">
+                <Image
+                  src="/diya.jpeg"
+                  alt="Diya Poulkar"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
+            </div>
+          </div>
 
-      </div>
+          {/* RIGHT HERO CONTENT */}
+          <div>
+            <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-widest bg-purple-100 text-purple-800 border border-purple-200 mb-6">
+              Computer Science Student • Developer • Problem Solver
+            </span>
 
-    </div>
+            <h1 className="text-5xl md:text-7xl font-extrabold text-slate-900 leading-tight tracking-tight">
+              Hi, I’m{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-700 via-indigo-600 to-pink-600">
+                Diya Poulkar
+              </span>
+            </h1>
 
-  </motion.div>
+            <p className="mt-6 text-slate-600 text-lg leading-relaxed max-w-xl font-normal">
+              Aspiring software engineer passionate about software development,
+              machine learning, and building impactful technology solutions
+              with clean, efficient, and user-centric systems.
+            </p>
 
-</section>
-        
+            {/* ACTION BUTTONS */}
+            <div className="mt-9 flex gap-4 flex-wrap items-center">
+              <a
+                href="#projects"
+                className="px-7 py-3.5 rounded-full bg-slate-900 hover:bg-slate-800 text-white font-medium transition duration-300 shadow-xl shadow-slate-900/20 hover:scale-[1.03]"
+              >
+                View Projects
+              </a>
 
-      {/* ABOUT */}
+              <a
+                href="/diya_poulkar_resume.pdf"
+                className="px-7 py-3.5 rounded-full bg-white hover:bg-slate-100 text-slate-800 font-medium border border-slate-300/80 transition duration-300 shadow-sm hover:scale-[1.03]"
+              >
+                Download Resume
+              </a>
+            </div>
+          </div>
+        </motion.div>
+      </section>
+
+      {/* ABOUT ME SECTION */}
       <motion.section
         id="about"
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
         variants={fadeUp}
-        className="py-24 px-6 max-w-5xl mx-auto"
+        className="py-20 px-6 max-w-5xl mx-auto"
       >
+        <div className="bg-white border border-slate-200/80 rounded-3xl p-8 md:p-12 shadow-xl shadow-slate-900/5 relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-48 h-48 bg-purple-100/50 rounded-full blur-2xl -z-10" />
 
-        <h2 className="text-4xl font-bold mb-6 text-purple-300">
-          About Me
-        </h2>
+          <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-6 flex items-center gap-3">
+            <span className="w-3 h-8 bg-purple-600 rounded-full" />
+            About Me
+          </h2>
 
-        <p className="text-gray-300 text-lg leading-relaxed">
-          I am a Computer Science student at VIT Bhopal passionate about
-          software development, machine learning, and solving real-world
-          problems through clean and efficient systems. I enjoy continuously
-          learning and building impactful technology solutions.
-        </p>
-
+          <p className="text-slate-600 text-lg leading-relaxed font-normal">
+            I am a Computer Science student at VIT Bhopal passionate about
+            software development, machine learning, and solving real-world
+            problems through clean and efficient systems. I enjoy continuously
+            learning, collaborating on innovative ideas, and building impactful
+            technology solutions.
+          </p>
+        </div>
       </motion.section>
 
-      {/* SKILLS */}
+      {/* TECHNICAL SKILLS SECTION */}
       <motion.section
         id="skills"
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
         variants={fadeUp}
-        className="py-24 px-6 max-w-6xl mx-auto"
+        className="py-20 px-6 max-w-6xl mx-auto"
       >
-
-        <h2 className="text-4xl font-bold mb-14 text-center text-blue-300">
-          Technical Skills
-        </h2>
+        <div className="text-center mb-14">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900">
+            Technical Skills
+          </h2>
+          <p className="text-slate-500 mt-2 text-base">
+            Languages, frameworks, and tools I work with
+          </p>
+        </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-
           {[
             {
               title: "Languages",
-              color: "from-purple-500 to-pink-500",
+              color: "from-purple-500 to-indigo-500",
               skills: ["Python", "C", "C++"],
             },
             {
@@ -174,63 +158,58 @@ export default function Home() {
               skills: ["Data Structures", "Problem Solving", "OOP"],
             },
             {
-              title: "Tools",
-              color: "from-pink-500 to-orange-500",
+              title: "Tools & Workflow",
+              color: "from-pink-500 to-rose-500",
               skills: ["GitHub", "VS Code", "Git"],
             },
             {
-              title: "Learning",
-              color: "from-cyan-500 to-purple-500",
-              skills: ["Java","Machine Learning", "APIs", "Backend Logic"],
+              title: "Focus Areas",
+              color: "from-indigo-500 to-purple-600",
+              skills: ["Java", "Machine Learning", "APIs", "Backend Logic"],
             },
           ].map((category, i) => (
             <div
               key={i}
-              className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl p-6 hover:scale-[1.03] transition duration-300"
+              className="bg-white border border-slate-200/80 rounded-3xl p-6 shadow-md hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between"
             >
-
-              <div
-                className={`absolute inset-0 opacity-0 group-hover:opacity-20 transition bg-gradient-to-r ${category.color}`}
-              />
-
-              <div className="relative z-10">
-
-                <h3 className="text-xl font-semibold mb-5">
-                  {category.title}
-                </h3>
+              <div>
+                <div className="flex items-center gap-3 mb-5">
+                  <div
+                    className={`w-3 h-3 rounded-full bg-gradient-to-r ${category.color}`}
+                  />
+                  <h3 className="text-xl font-bold text-slate-800">
+                    {category.title}
+                  </h3>
+                </div>
 
                 <div className="flex flex-wrap gap-2">
-
                   {category.skills.map((skill, idx) => (
                     <span
                       key={idx}
-                      className="px-3 py-1 rounded-full text-sm bg-black/40 border border-white/10 text-gray-300"
+                      className="px-3.5 py-1.5 rounded-full text-xs font-medium bg-slate-100 border border-slate-200/90 text-slate-700"
                     >
                       {skill}
                     </span>
                   ))}
-
                 </div>
-
               </div>
             </div>
           ))}
-
         </div>
       </motion.section>
 
-      {/* PROJECTS */}
-      <section
-        id="projects"
-        className="py-28 px-6 max-w-6xl mx-auto"
-      >
+      {/* FEATURED PROJECTS SECTION */}
+      <section id="projects" className="py-24 px-6 max-w-6xl mx-auto">
+        <div className="text-center mb-14">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900">
+            Featured Projects
+          </h2>
+          <p className="text-slate-500 mt-2 text-base">
+            Recent applications and hackathon innovations
+          </p>
+        </div>
 
-        <h2 className="text-4xl font-bold text-center mb-14 text-pink-300">
-          Featured Projects
-        </h2>
-
-        <div className="grid md:grid-cols-2 gap-10">
-
+        <div className="grid md:grid-cols-2 gap-8">
           {[
             {
               title: "Saathi — Multimodal AI Accessibility Copilot",
@@ -239,69 +218,64 @@ export default function Home() {
               tags: ["React 18", "Vite", "Groq AI", "Llama 3.3/3.2", "Web Speech API"],
               liveUrl: "https://team-sarvashrestha-diya-poulkar.vercel.app",
               githubUrl: "https://github.com/diyaapoulkar-alt/Team-Sarvashrestha-Diya-Poulkar",
-              color: "from-emerald-500 via-teal-500 to-cyan-500",
+              accent: "from-emerald-500 to-teal-600",
             },
             {
               title: "Smart News Assistant",
-              desc: "AI-based system that fetches and summarizes news using APIs with intelligent filtering and clean UX.",
+              desc: "AI-based system that fetches and summarizes news using APIs with intelligent filtering, sentiment categorization, and clean UX.",
               tags: ["Python", "APIs", "NLP"],
-              color: "from-purple-500 to-pink-500",
+              accent: "from-purple-500 to-indigo-600",
             },
             {
               title: "Smart Commute Assistant",
-              desc: "Machine learning-based travel time prediction system using APIs, regression models, and real-world datasets.",
+              desc: "Machine learning-based travel time prediction system using live travel datasets, APIs, and regression modeling.",
               tags: ["Python", "Machine Learning", "Travel APIs"],
-              color: "from-blue-500 to-cyan-500",
+              accent: "from-blue-500 to-cyan-600",
             },
           ].map((project, i) => (
             <div
               key={i}
-              className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl p-7 hover:scale-[1.02] transition duration-300 flex flex-col justify-between"
+              className={`bg-white border border-slate-200/90 rounded-3xl p-8 shadow-lg shadow-slate-900/5 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between ${
+                i === 0 ? "md:col-span-2" : ""
+              }`}
             >
-
-              <div
-                className={`absolute inset-0 opacity-0 group-hover:opacity-20 transition bg-gradient-to-r ${project.color}`}
-              />
-
-              <div className="relative z-10">
-
+              <div>
                 {project.badge && (
-                  <span className="inline-block px-3 py-1 mb-3 rounded-full text-xs font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+                  <span className="inline-block px-3.5 py-1 mb-4 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800 border border-emerald-200">
                     {project.badge}
                   </span>
                 )}
 
-                <h3 className="text-2xl font-semibold">
+                <h3 className="text-2xl md:text-3xl font-bold text-slate-900">
                   {project.title}
                 </h3>
 
-                <p className="text-gray-300 mt-4 leading-relaxed text-sm md:text-base">
+                <p className="text-slate-600 mt-4 leading-relaxed text-base font-normal">
                   {project.desc}
                 </p>
 
                 {project.tags && (
-                  <div className="flex flex-wrap gap-2 mt-5">
+                  <div className="flex flex-wrap gap-2 mt-6">
                     {project.tags.map((tag, idx) => (
                       <span
                         key={idx}
-                        className="px-3 py-1 rounded-full text-xs bg-black/50 border border-white/10 text-gray-300"
+                        className="px-3.5 py-1.5 rounded-full text-xs font-semibold bg-slate-100 border border-slate-200 text-slate-700"
                       >
                         {tag}
                       </span>
                     ))}
                   </div>
                 )}
-
               </div>
 
               {(project.liveUrl || project.githubUrl) && (
-                <div className="relative z-10 mt-7 flex gap-3 flex-wrap">
+                <div className="mt-8 pt-6 border-t border-slate-100 flex gap-3 flex-wrap">
                   {project.liveUrl && (
                     <a
                       href={project.liveUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-5 py-2 rounded-full text-sm font-medium bg-gradient-to-r from-emerald-500 to-cyan-500 hover:scale-105 transition shadow-lg shadow-emerald-500/20 text-white"
+                      className="px-6 py-2.5 rounded-full text-sm font-semibold bg-slate-900 text-white hover:bg-slate-800 transition duration-300 shadow-md hover:scale-[1.02]"
                     >
                       🌐 Live Demo
                     </a>
@@ -312,217 +286,158 @@ export default function Home() {
                       href={project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-5 py-2 rounded-full text-sm font-medium border border-white/20 hover:bg-white/10 transition text-gray-300 hover:text-white"
+                      className="px-6 py-2.5 rounded-full text-sm font-semibold bg-white text-slate-800 border border-slate-300 hover:bg-slate-100 transition duration-300 hover:scale-[1.02]"
                     >
                       📦 GitHub Repo
                     </a>
                   )}
                 </div>
               )}
-
             </div>
           ))}
-
         </div>
       </section>
 
-    {/* EDUCATION */}
-<section
-  id="education"
-  className="py-24 px-6 max-w-5xl mx-auto"
->
-
-  <h2 className="text-4xl font-bold mb-14 text-purple-300 text-center">
-    Education
-  </h2>
-
-  <div className="space-y-8">
-
-    {/* College */}
-    <div className="group relative overflow-hidden rounded-3xl border border-purple-500/20 bg-white/5 backdrop-blur-xl p-7 hover:scale-[1.02] transition duration-300">
-
-      <div className="absolute inset-0 opacity-0 group-hover:opacity-20 transition bg-gradient-to-r from-purple-500 to-pink-500" />
-
-      <div className="relative z-10">
-
-        <p className="text-sm text-purple-300 mb-2">
-          2025 – Present
-        </p>
-
-        <h3 className="text-2xl font-semibold">
-          VIT Bhopal University
-        </h3>
-
-        <p className="text-gray-300 mt-2">
-          B.Tech in Computer Science Engineering
-        </p>
-
-        <p className="text-gray-400 mt-3">
-          Current CGPA: 9.22
-        </p>
-
-      </div>
-    </div>
-
-    {/* School Cards */}
-    <div className="grid md:grid-cols-2 gap-6">
-
-      {/* 12th */}
-      <div className="group relative overflow-hidden rounded-3xl border border-blue-500/20 bg-white/5 backdrop-blur-xl p-6 hover:scale-[1.03] transition">
-
-        <div className="absolute inset-0 opacity-0 group-hover:opacity-20 transition bg-gradient-to-r from-blue-500 to-cyan-500" />
-
-        <div className="relative z-10">
-
-          <p className="text-sm text-blue-300 mb-2">
-            Class XII
+      {/* EDUCATION SECTION */}
+      <section id="education" className="py-20 px-6 max-w-5xl mx-auto">
+        <div className="text-center mb-14">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900">
+            Education
+          </h2>
+          <p className="text-slate-500 mt-2 text-base">
+            Academic qualifications and achievements
           </p>
-
-          <h3 className="text-xl font-semibold">
-            Wisdom High International School & Jr. College
-          </h3>
-
-          <p className="text-gray-400 mt-3">
-            Percentage: 74%
-          </p>
-
         </div>
-      </div>
 
-      {/* 10th */}
-      <div className="group relative overflow-hidden rounded-3xl border border-pink-500/20 bg-white/5 backdrop-blur-xl p-6 hover:scale-[1.03] transition">
+        <div className="space-y-6">
+          {/* College Card */}
+          <div className="bg-white border border-slate-200/90 rounded-3xl p-8 shadow-md hover:shadow-xl transition duration-300">
+            <span className="text-xs font-bold uppercase tracking-wider text-purple-700 bg-purple-50 px-3 py-1 rounded-full border border-purple-200">
+              2025 – Present
+            </span>
+            <h3 className="text-2xl font-bold text-slate-900 mt-4">
+              VIT Bhopal University
+            </h3>
+            <p className="text-slate-700 font-medium mt-1">
+              B.Tech in Computer Science Engineering
+            </p>
+            <p className="text-purple-800 font-bold mt-3 text-base">
+              Current CGPA: 9.22
+            </p>
+          </div>
 
-        <div className="absolute inset-0 opacity-0 group-hover:opacity-20 transition bg-gradient-to-r from-pink-500 to-purple-500" />
+          {/* School Cards Grid */}
+          <div className="grid md:grid-cols-2 gap-6">
+            {/* 12th */}
+            <div className="bg-white border border-slate-200/90 rounded-3xl p-7 shadow-md hover:shadow-xl transition duration-300">
+              <span className="text-xs font-bold uppercase tracking-wider text-indigo-700 bg-indigo-50 px-3 py-1 rounded-full border border-indigo-200">
+                Class XII (HSC)
+              </span>
+              <h3 className="text-xl font-bold text-slate-900 mt-4">
+                Wisdom High International School & Jr. College
+              </h3>
+              <p className="text-slate-600 mt-3 font-semibold">
+                Percentage: 74%
+              </p>
+            </div>
 
-        <div className="relative z-10">
-
-          <p className="text-sm text-pink-300 mb-2">
-            Class X
-          </p>
-
-          <h3 className="text-xl font-semibold">
-            Boys’ Town Public School
-          </h3>
-
-          <p className="text-gray-400 mt-3">
-            Percentage: 90%
-          </p>
-
+            {/* 10th */}
+            <div className="bg-white border border-slate-200/90 rounded-3xl p-7 shadow-md hover:shadow-xl transition duration-300">
+              <span className="text-xs font-bold uppercase tracking-wider text-pink-700 bg-pink-50 px-3 py-1 rounded-full border border-pink-200">
+                Class X (ICSE/SSC)
+              </span>
+              <h3 className="text-xl font-bold text-slate-900 mt-4">
+                Boys’ Town Public School
+              </h3>
+              <p className="text-slate-600 mt-3 font-semibold">
+                Percentage: 90%
+              </p>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
 
-    </div>
+      {/* EXPERIENCE SECTION */}
+      <section id="experience" className="py-20 px-6 max-w-5xl mx-auto">
+        <div className="text-center mb-14">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900">
+            Experience
+          </h2>
+          <p className="text-slate-500 mt-2 text-base">
+            Technical leadership and industry internships
+          </p>
+        </div>
 
-  </div>
-</section>
+        <div className="space-y-6">
+          {/* Linpack Club */}
+          <div className="bg-white border border-slate-200/90 rounded-3xl p-8 shadow-md hover:shadow-xl transition duration-300">
+            <span className="text-xs font-bold uppercase tracking-wider text-purple-700 bg-purple-50 px-3 py-1 rounded-full border border-purple-200">
+              May 2026 – Present
+            </span>
+            <h3 className="text-2xl font-bold text-slate-900 mt-4">
+              Core Member – Technical Team
+            </h3>
+            <p className="text-slate-700 font-medium mt-1">
+              Linpack Club • VIT Bhopal
+            </p>
+            <p className="text-slate-600 mt-3 leading-relaxed">
+              Contributing to technical development tasks, collaborating on web projects,
+              and building modern solutions using React.js and modern software engineering practices.
+            </p>
+          </div>
 
-{/* EXPERIENCE */}
-<section
-  id="experience"
-  className="py-24 px-6 max-w-5xl mx-auto"
->
+          {/* Minitek Internship */}
+          <div className="bg-white border border-slate-200/90 rounded-3xl p-8 shadow-md hover:shadow-xl transition duration-300">
+            <span className="text-xs font-bold uppercase tracking-wider text-blue-700 bg-blue-50 px-3 py-1 rounded-full border border-blue-200">
+              Internship • July 2025 – August 2025
+            </span>
+            <h3 className="text-2xl font-bold text-slate-900 mt-4">
+              Minitek Systems India Pvt. Ltd.
+            </h3>
+            <p className="text-slate-600 mt-3 leading-relaxed">
+              Worked on technical learning, software workflows, algorithm design, and practical
+              problem solving while improving analytical and development skills.
+            </p>
+          </div>
+        </div>
+      </section>
 
-  <h2 className="text-4xl font-bold mb-14 text-center text-blue-300">
-    Experience
-  </h2>
+      {/* CONTACT SECTION */}
+      <section
+        id="contact"
+        className="py-24 px-6 text-center max-w-5xl mx-auto"
+      >
+        <div className="bg-gradient-to-b from-white to-slate-100 border border-slate-200/90 rounded-3xl p-10 md:p-14 shadow-xl shadow-slate-900/5">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">
+            Let’s Connect
+          </h2>
+          <p className="text-slate-600 mb-10 text-base max-w-lg mx-auto font-normal">
+            Open for internships, tech collaborations, and engineering opportunities.
+          </p>
 
-  <div className="space-y-8">
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+            {/* Email */}
+            <a
+              href="mailto:diyaapoulkar@gmail.com"
+              className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-white border border-slate-300 hover:border-purple-500 hover:bg-purple-50/50 transition duration-300 shadow-sm flex items-center justify-center gap-3 font-semibold text-slate-800"
+            >
+              <span className="text-xl">📧</span>
+              <span>diyaapoulkar@gmail.com</span>
+            </a>
 
-    {/* Linpack */}
-    <div className="group relative overflow-hidden rounded-3xl border border-purple-500/20 bg-white/5 backdrop-blur-xl p-7 hover:scale-[1.02] transition duration-300">
-
-      <div className="absolute inset-0 opacity-0 group-hover:opacity-20 transition bg-gradient-to-r from-purple-500 to-blue-500" />
-
-      <div className="relative z-10">
-
-        <p className="text-sm text-purple-300 mb-2">
-          May 2026 – Present
-        </p>
-
-        <h3 className="text-2xl font-semibold">
-          Core Member – Technical Team
-        </h3>
-
-        <p className="text-gray-300 mt-2">
-          Linpack Club • VIT Bhopal
-        </p>
-
-        <p className="text-gray-400 mt-3 leading-relaxed">
-          Contributing to technical development tasks, collaborating on projects,
-          and building modern web solutions using React.js and related technologies.
-        </p>
-
-      </div>
-    </div>
-
-    {/* Minitek */}
-    <div className="group relative overflow-hidden rounded-3xl border border-blue-500/20 bg-white/5 backdrop-blur-xl p-7 hover:scale-[1.02] transition duration-300">
-
-      <div className="absolute inset-0 opacity-0 group-hover:opacity-20 transition bg-gradient-to-r from-blue-500 to-cyan-500" />
-
-      <div className="relative z-10">
-
-        <p className="text-sm text-blue-300 mb-2">
-          Internship • July 2025 – August 2025
-        </p>
-
-        <h3 className="text-2xl font-semibold">
-          Minitek Sytsems India Pvt. Ltd.
-        </h3>
-
-        <p className="text-gray-400 mt-3 leading-relaxed">
-          Worked on technical learning, software workflows, and practical
-          problem solving while improving analytical and development skills.
-        </p>
-
-      </div>
-    </div>
-
-  </div>
-</section>
-      {/* CONTACT */}
-<section
-  id="contact"
-  className="py-24 px-6 text-center max-w-5xl mx-auto"
->
-
-  <h2 className="text-4xl font-bold mb-6 text-pink-300">
-    Let’s Connect
-  </h2>
-
-  <p className="text-gray-400 mb-10">
-    Open for internships, collaborations, and opportunities.
-  </p>
-
-  {/* CONTACT CARDS */}
-  <div className="flex flex-col md:flex-row justify-center items-center gap-6">
-
-    {/* EMAIL */}
-    <a
-      href="mailto:diyaapoulkar@gmail.com"
-      className="group px-6 py-4 rounded-2xl bg-white/5 border border-white/10 backdrop-blur hover:border-pink-400/50 transition flex items-center gap-3"
-    >
-      <span className="text-xl">📧</span>
-      <span className="text-gray-300 group-hover:text-white transition">
-        diyaapoulkar@gmail.com
-      </span>
-    </a>
-
-    {/* LINKEDIN */}
-    <a
-      href="https://www.linkedin.com/in/diya-poulkar-05721037a/" 
-      target="_blank"
-      className="group px-6 py-4 rounded-2xl bg-white/5 border border-white/10 backdrop-blur hover:border-blue-400/50 transition flex items-center gap-3"
-    >
-      <span className="text-xl">🔗</span>
-      <span className="text-gray-300 group-hover:text-white transition">
-        LinkedIn Profile
-      </span>
-    </a>
-
-  </div>
-
-</section>
+            {/* LinkedIn */}
+            <a
+              href="https://www.linkedin.com/in/diya-poulkar-05721037a/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-slate-900 text-white hover:bg-slate-800 transition duration-300 shadow-md flex items-center justify-center gap-3 font-semibold"
+            >
+              <span className="text-xl">🔗</span>
+              <span>LinkedIn Profile</span>
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }

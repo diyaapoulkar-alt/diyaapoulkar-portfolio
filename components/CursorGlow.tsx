@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 export default function CursorGlow() {
-  const [pos, setPos] = useState({ x: 0, y: 0 });
+  const [pos, setPos] = useState({ x: -500, y: -500 });
 
   useEffect(() => {
     const move = (e: MouseEvent) => {
@@ -16,9 +16,9 @@ export default function CursorGlow() {
 
   return (
     <div
-      className="pointer-events-none fixed inset-0 z-50"
+      className="pointer-events-none fixed inset-0 z-30 transition-opacity duration-300"
       style={{
-        background: `radial-gradient(600px at ${pos.x}px ${pos.y}px, rgba(168,85,247,0.15), transparent 80%)`,
+        background: `radial-gradient(650px at ${pos.x}px ${pos.y}px, rgba(147, 51, 234, 0.07), transparent 75%)`,
       }}
     />
   );
