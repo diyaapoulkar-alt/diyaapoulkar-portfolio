@@ -48,7 +48,7 @@ A modern, high-performance, white-themed developer portfolio website built with 
 
 **Diyaa Poulkar**  
 *Computer Science Student • Developer • Problem Solver*  
-🎓 **VIT Bhopal University** — B.Tech in Computer Science Engineering (CGPA: **9.22**)  
+🎓 **VIT Bhopal University** — B.Tech in Computer Science Engineering (CGPA: **9.31**)  
 💼 Core Technical Team Member at **Linpack Club**, Former Intern at **Minitek Systems**
 
 ---
@@ -88,7 +88,7 @@ A modern, high-performance, white-themed developer portfolio website built with 
   - Engaged in practical software solution workflows, algorithm design, and analytical debugging.
 
 ### Academic Background
-- **B.Tech in Computer Science Engineering** — *VIT Bhopal University* (`2025 – Present`) | **CGPA: 9.22**
+- **B.Tech in Computer Science Engineering** — *VIT Bhopal University* (`2025 – Present`) | **CGPA: 9.31**
 - **Class XII (HSC)** — *Wisdom High International School & Jr. College* | **74%**
 - **Class X (ICSE/SSC)** — *Boys’ Town Public School* | **90%**
 
