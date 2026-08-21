@@ -107,23 +107,69 @@ export default function Home() {
         whileInView="show"
         viewport={{ once: true }}
         variants={fadeUp}
-        className="py-20 px-6 max-w-5xl mx-auto"
+        className="py-20 px-6 max-w-6xl mx-auto"
       >
-        <div className="bg-white border border-amber-900/10 rounded-3xl p-8 md:p-12 shadow-xl shadow-amber-950/5 relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-48 h-48 bg-amber-100/50 rounded-full blur-2xl -z-10" />
+        <div className="bg-white border border-amber-900/10 rounded-[2.5rem] p-8 md:p-12 shadow-xl shadow-amber-950/5 relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-amber-100/60 rounded-full blur-3xl -z-10" />
 
-          <h2 className="text-3xl md:text-4xl font-black text-amber-950 mb-6 flex items-center gap-3">
-            <span className="w-3 h-8 bg-amber-800 rounded-full" />
-            About Me
-          </h2>
+          <div className="grid lg:grid-cols-12 gap-8 items-center">
+            {/* LEFT BIO NARRATIVE */}
+            <div className="lg:col-span-7">
+              <span className="inline-block px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-widest bg-amber-100/90 text-amber-950 border border-amber-300/70 mb-4 shadow-sm">
+                Personal Profile & Philosophy
+              </span>
 
-          <p className="text-stone-700 text-lg leading-relaxed font-normal">
-            I am a Computer Science student at VIT Bhopal passionate about
-            software development, machine learning, and solving real-world
-            problems through clean and efficient systems. I enjoy continuously
-            learning, collaborating on innovative ideas, and building impactful
-            technology solutions.
-          </p>
+              <h2 className="text-3xl md:text-4xl font-black text-amber-950 tracking-tight mb-6">
+                Passionate About Building Intelligent, Accessible & Scalable Software
+              </h2>
+
+              <p className="text-stone-700 text-base md:text-lg leading-relaxed font-normal">
+                I am a <strong className="font-semibold text-amber-950">Computer Science Engineering student at VIT Bhopal University</strong> (maintaining an academic <strong className="font-semibold text-amber-950">9.31 CGPA</strong>) with a deep passion for software development, full-stack web engineering, and applied artificial intelligence.
+              </p>
+
+              <p className="text-stone-700 text-base md:text-lg leading-relaxed font-normal mt-4">
+                My engineering journey revolves around turning complex concepts into clean, efficient systems—from building <strong className="font-semibold text-amber-950">multimodal AI accessibility platforms</strong> like <em>Saathi</em> (SOFC 2.0 Hackathon Submission) to designing data-backed machine learning applications. As a Core Technical Team Member at <strong className="font-semibold text-amber-950">Linpack Club</strong> and former Software Intern at <strong className="font-semibold text-amber-950">Minitek Systems</strong>, I thrive on continuous learning, problem-solving, and building software that creates a meaningful real-world impact.
+              </p>
+            </div>
+
+            {/* RIGHT HIGHLIGHT CARDS */}
+            <div className="lg:col-span-5 grid grid-cols-1 gap-4">
+              {[
+                {
+                  icon: "🎓",
+                  title: "Academic Excellence",
+                  desc: "B.Tech CSE at VIT Bhopal with a 9.31 CGPA and a solid foundation in core computer science principles.",
+                },
+                {
+                  icon: "💡",
+                  title: "AI & Full-Stack Development",
+                  desc: "Specializing in multimodal AI applications, natural language processing, and modern web frameworks.",
+                },
+                {
+                  icon: "🤝",
+                  title: "Leadership & Experience",
+                  desc: "Core technical team member at Linpack Club & former intern at Minitek Systems India.",
+                },
+              ].map((card, idx) => (
+                <div
+                  key={idx}
+                  className="bg-gradient-to-br from-amber-50/80 to-amber-100/50 border border-amber-900/10 rounded-2xl p-5 hover:bg-amber-100/70 transition duration-300 shadow-sm"
+                >
+                  <div className="flex items-start gap-3.5">
+                    <span className="text-2xl shrink-0">{card.icon}</span>
+                    <div>
+                      <h3 className="text-base font-bold text-amber-950">
+                        {card.title}
+                      </h3>
+                      <p className="text-xs text-stone-600 mt-1 leading-relaxed font-medium">
+                        {card.desc}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </motion.section>
 
