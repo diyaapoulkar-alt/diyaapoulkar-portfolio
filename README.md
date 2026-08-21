@@ -55,7 +55,7 @@ A modern, high-performance, white-themed developer portfolio website built with 
 
 ## 🚀 Featured Projects
 
-### ♿ 1. Saathi — Multimodal AI Accessibility Copilot *(SOFC 2.0 Hackathon Submission)*
+### ♿ 1. Saathi — Multimodal AI Accessibility Copilot *(2nd Runner Up in AI AGENTS TRACK for the SoCF 2.0 Hackathon)*
 - **Overview**: A smart AI accessibility copilot built to support university students with diverse sensory & learning needs.
 - **Key Features**:
   - 👁️ **Visual Assist**: Blackboard photo & note image analysis using Groq Llama 3.2 Vision + Canvas OCR for screen readers.

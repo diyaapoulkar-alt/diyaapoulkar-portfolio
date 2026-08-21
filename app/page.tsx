@@ -124,11 +124,11 @@ export default function Home() {
               </h2>
 
               <p className="text-stone-700 text-base md:text-lg leading-relaxed font-normal">
-                I am a <strong className="font-semibold text-amber-950">Computer Science Engineering student at VIT Bhopal University</strong> (maintaining an academic <strong className="font-semibold text-amber-950">9.31 CGPA</strong>) with a deep passion for software development, full-stack web engineering, and applied artificial intelligence.
+                I am a <strong className="font-semibold text-amber-950">Computer Science Engineering student at VIT Bhopal University</strong> with a deep passion for software development, full-stack web engineering, and applied artificial intelligence.
               </p>
 
               <p className="text-stone-700 text-base md:text-lg leading-relaxed font-normal mt-4">
-                My engineering journey revolves around turning complex concepts into clean, efficient systems—from building <strong className="font-semibold text-amber-950">multimodal AI accessibility platforms</strong> like <em>Saathi</em> (SOFC 2.0 Hackathon Submission) to designing data-backed machine learning applications. As a Core Technical Team Member at <strong className="font-semibold text-amber-950">Linpack Club</strong> and former Software Intern at <strong className="font-semibold text-amber-950">Minitek Systems</strong>, I thrive on continuous learning, problem-solving, and building software that creates a meaningful real-world impact.
+                My engineering journey revolves around turning complex concepts into clean, efficient systems—from building <strong className="font-semibold text-amber-950">multimodal AI accessibility platforms</strong> like <em>Saathi</em> (<strong className="font-semibold text-amber-950">2nd Runner Up in AI AGENTS TRACK for the SoCF 2.0 Hackathon</strong>) to developing practical software & web applications. As a Core Technical Team Member at <strong className="font-semibold text-amber-950">Linpack Club</strong> and former Software Intern at <strong className="font-semibold text-amber-950">Minitek Systems</strong>, I thrive on continuous learning, problem-solving, and building software that creates a meaningful real-world impact.
               </p>
             </div>
 
@@ -264,7 +264,7 @@ export default function Home() {
                 <div>
                   <div className="flex items-center gap-3 mb-4 flex-wrap">
                     <span className="px-3.5 py-1 rounded-full text-xs font-extrabold bg-amber-100 text-amber-950 border border-amber-300/80">
-                      🏆 SOFC 2.0 Hackathon Submission
+                      🏆 2nd Runner Up in AI AGENTS TRACK for the SoCF 2.0 Hackathon
                     </span>
                     <span className="px-3 py-1 rounded-full text-xs font-bold bg-emerald-100 text-emerald-900 border border-emerald-300/60">
                       🟢 Live Production
