@@ -1,36 +1,151 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌐 Diyaa Poulkar — Personal Portfolio Website
 
-## Getting Started
+[![Next.js](https://img.shields.io/badge/Next.js-16.2.6-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-19.2.4-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[![Framer Motion](https://img.shields.io/badge/Framer_Motion-12.40-0055FF?style=for-the-badge&logo=framer&logoColor=white)](https://www.framer.com/motion/)
 
-First, run the development server:
+A modern, high-performance, dark-themed developer portfolio website built with **Next.js 16 (App Router)**, **React 19**, **TypeScript**, **Tailwind CSS v4**, and **Framer Motion**. Features responsive design, glassmorphism UI cards, smooth page scroll, and custom cursor lighting effects.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## ✨ Features
+
+- 🎨 **Modern Glassmorphism UI**: Sleek dark theme featuring translucent glassmorphic components, vibrant gradient accents, and custom cursor illumination.
+- ⚡ **Next.js 16 App Router & React 19**: Powered by the latest Next.js features for maximum performance and server-side optimization.
+- 🎭 **Smooth Motion & Animations**: Entrance animations, hover effects, and interactive UI dynamics built using `framer-motion`.
+- 📱 **100% Fully Responsive**: Seamless viewing experience tailored for desktop, tablet, and mobile displays.
+- 🧩 **Modular Section Architecture**:
+  - **Hero**: Personal tagline, quick action buttons (Projects & Resume download).
+  - **About Me**: Professional background and career focus.
+  - **Technical Skills**: Categorized breakdown of languages, core concepts, and developer tools.
+  - **Featured Projects**: Showcase of key machine learning & web engineering projects.
+  - **Education**: Detailed academic journey with current metrics (VIT Bhopal).
+  - **Experience**: Technical leadership and industry internship history.
+  - **Contact**: Quick social links and direct email dispatch.
+
+---
+
+## 🛠️ Tech Stack
+
+| Category | Technologies |
+| :--- | :--- |
+| **Framework & Core** | [Next.js 16](https://nextjs.org/) (App Router), [React 19](https://react.dev/), [TypeScript](https://www.typescriptlang.org/) |
+| **Styling & UI** | [Tailwind CSS v4](https://tailwindcss.com/), PostCSS |
+| **Animations** | [Framer Motion](https://www.framer.com/motion/) |
+| **Languages** | Python, C, C++, Java |
+| **Tools & Workflow** | Git, GitHub, VS Code |
+
+---
+
+## 👤 Developer Profile
+
+**Diyaa Poulkar**  
+*Computer Science Student • Developer • Problem Solver*  
+🎓 **VIT Bhopal University** — B.Tech in Computer Science Engineering (CGPA: **9.22**)  
+💼 Core Technical Team Member at **Linpack Club**, Former Intern at **Minitek Systems**
+
+---
+
+## 🚀 Featured Projects
+
+### 📰 1. Smart News Assistant
+- **Overview**: An AI-based news aggregation & summarization platform.
+- **Key Features**: Fetches real-time headlines using external APIs, applies intelligent summary filtering, and presents news through a minimal, user-focused UI.
+- **Tech Stack**: Python, APIs, Natural Language Processing / AI models.
+
+### 🚗 2. Smart Commute Assistant
+- **Overview**: Machine learning-based travel time prediction and navigation routing tool.
+- **Key Features**: Leverages regression algorithms and live travel datasets to predict transit times and optimize commute routes.
+- **Tech Stack**: Python, Machine Learning (Regression Models), Travel APIs.
+
+---
+
+## 💼 Experience & 🎓 Education
+
+### Work & Technical Experience
+- 🌟 **Core Member – Technical Team** @ *Linpack Club, VIT Bhopal* (`May 2026 – Present`)
+  - Spearheaded frontend/web development tasks using React.js and collaborative software workflows.
+- 🏢 **Software Intern** @ *Minitek Systems India Pvt. Ltd.* (`July 2025 – August 2025`)
+  - Engaged in practical software solution workflows, algorithm design, and analytical debugging.
+
+### Academic Background
+- **B.Tech in Computer Science Engineering** — *VIT Bhopal University* (`2025 – Present`) | **CGPA: 9.22**
+- **Class XII (HSC)** — *Wisdom High International School & Jr. College* | **74%**
+- **Class X (ICSE/SSC)** — *Boys’ Town Public School* | **90%**
+
+---
+
+## 📂 Project Structure
+
+```text
+diyaapoulkar-portfolio/
+├── app/
+│   ├── favicon.ico
+│   ├── globals.css         # Global styles & Tailwind directives
+│   ├── layout.tsx          # Root layout & font configuration
+│   └── page.tsx            # Main single-page portfolio view
+├── components/
+│   ├── Contact.tsx         # Contact section component
+│   ├── CursorGlow.tsx      # Interactive glowing cursor effect
+│   ├── Experience.tsx      # Work history component
+│   ├── Hero.tsx            # Main landing hero section
+│   ├── Navbar.tsx          # Fixed responsive glassmorphism navigation
+│   └── Projects.tsx        # Projects showcase section
+├── public/
+│   ├── diya.jpeg           # Developer profile image
+│   └── diya_poulkar_resume.pdf  # Downloadable resume
+├── eslint.config.mjs
+├── next.config.ts
+├── package.json
+├── postcss.config.mjs
+├── tsconfig.json
+└── README.md
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 💻 Local Development Setup
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Follow these instructions to run the portfolio website locally on your computer.
 
-## Learn More
+### 1. Prerequisites
+Ensure you have [Node.js](https://nodejs.org/) (v18 or higher recommended) and `npm` installed.
 
-To learn more about Next.js, take a look at the following resources:
+### 2. Clone the Repository
+```bash
+git clone https://github.com/diyaapoulkar-alt/diyaapoulkar-portfolio.git
+cd diyaapoulkar-portfolio
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 3. Install Dependencies
+```bash
+npm install
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 4. Start the Development Server
+```bash
+npm run dev
+```
 
-## Deploy on Vercel
+Open [http://localhost:3000](http://localhost:3000) in your browser to view the application.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 5. Build for Production
+To test the production build locally:
+```bash
+npm run build
+npm run start
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 📬 Connect & Contact
+
+- **Email**: [diyaapoulkar@gmail.com](mailto:diyaapoulkar@gmail.com)
+- **LinkedIn**: [linkedin.com/in/diya-poulkar-05721037a](https://www.linkedin.com/in/diya-poulkar-05721037a/)
+- **GitHub**: [@diyaapoulkar-alt](https://github.com/diyaapoulkar-alt)
+
+---
+
+⭐ *If you like this portfolio, feel free to give the repository a star!*
