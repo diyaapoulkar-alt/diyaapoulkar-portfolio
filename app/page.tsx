@@ -49,7 +49,7 @@ export default function Home() {
             </span>
 
             <h1 className="text-5xl md:text-7xl font-black text-amber-950 leading-tight tracking-tight">
-              Hi, I’m{" "}
+              Hey, I’m{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-900 via-amber-800 to-amber-950">
                 Diya Poulkar
               </span>
@@ -128,7 +128,7 @@ export default function Home() {
               </p>
 
               <p className="text-stone-700 text-base md:text-lg leading-relaxed font-normal mt-4">
-                My engineering journey revolves around turning complex concepts into clean, efficient systems—from building <strong className="font-semibold text-amber-950">multimodal AI accessibility platforms</strong> like <em>Saathi</em> (<strong className="font-semibold text-amber-950">2nd Runner Up in AI AGENTS TRACK for the SoCF 2.0 Hackathon</strong>) to developing practical software & web applications. As a Core Technical Team Member at <strong className="font-semibold text-amber-950">Linpack Club</strong> and former Software Intern at <strong className="font-semibold text-amber-950">Minitek Systems</strong>, I thrive on continuous learning, problem-solving, and building software that creates a meaningful real-world impact.
+                My engineering journey revolves around turning complex concepts into clean, efficient systems—from building <strong className="font-semibold text-amber-950">multimodal AI accessibility platforms</strong> like <em>Saathi</em> (<strong className="font-semibold text-amber-950">2nd Runner Up in AI AGENTS TRACK for the SoCF 2.0 Hackathon</strong>) to developing practical software & web solutions. As a Core Technical Team Member at <strong className="font-semibold text-amber-950">Linpack Club</strong>, I thrive on continuous learning, analytical problem-solving, and building software that creates a meaningful real-world impact.
               </p>
             </div>
 
@@ -147,8 +147,8 @@ export default function Home() {
                 },
                 {
                   icon: "🤝",
-                  title: "Leadership & Experience",
-                  desc: "Core technical team member at Linpack Club & former intern at Minitek Systems India.",
+                  title: "Leadership & Community",
+                  desc: "Core technical team member at Linpack Club with a focus on web engineering and analytical problem solving.",
                 },
               ].map((card, idx) => (
                 <div
