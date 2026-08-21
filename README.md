@@ -7,7 +7,7 @@
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
 [![Framer Motion](https://img.shields.io/badge/Framer_Motion-12.40-0055FF?style=for-the-badge&logo=framer&logoColor=white)](https://www.framer.com/motion/)
 
-A modern, high-performance, white-themed developer portfolio website built with **Next.js 16 (App Router)**, **React 19**, **TypeScript**, **Tailwind CSS v4**, and **Framer Motion**. Features a Palomino-inspired cinematic opening intro screen, floating glassmorphism pill navigation bar, responsive design, and smooth hover animations.
+A modern, high-performance, white-themed developer portfolio website built with **Next.js 16 (App Router)**, **React 19**, **TypeScript**, **Tailwind CSS v4**, and **Framer Motion**. Features a Palomino-inspired cinematic opening intro screen, floating glassmorphism pill navigation bar, responsive design, warm brown typography, and smooth hover animations.
 
 🚀 **Live Portfolio Website**: [https://diyaapoulkar-portfolio.vercel.app](https://diyaapoulkar-portfolio.vercel.app/)
 
@@ -16,19 +16,19 @@ A modern, high-performance, white-themed developer portfolio website built with 
 ## ✨ Features
 
 - 🎬 **Cinematic Opening Preloader**: Full-screen entrance animation displaying **DIYA POULKAR** in bold typography with expanding geometric frame lines and a smooth curtain reveal.
-- 🎨 **Modern White Theme UI**: High-contrast, clean light theme with subtle slate cards, ambient purple/indigo background glows, and interactive cursor lighting.
+- 🎨 **Modern White Theme UI**: High-contrast, clean light theme with subtle slate cards, warm brown headline typography, and interactive ambient cursor lighting.
 - 🧭 **Floating Pill Navigation Bar**: Centered floating pill navbar inspired by *rbp-portfolio* featuring animated active tab indicators.
 - ⚡ **Next.js 16 App Router & React 19**: Built on the latest Next.js stack for server optimization and rapid page loads.
-- 🎭 **Smooth Motion & Animations**: Entrance animations, hover effects, and interactive UI dynamics built using `framer-motion`.
+- 🖼️ **Right-Side Hero Portrait**: Elegant portrait card frame with subtle tilt and ambient glow placed on the right side of the hero section.
 - 📱 **100% Fully Responsive**: Seamless viewing experience tailored for desktop, tablet, and mobile displays.
 - 🧩 **Modular Section Architecture**:
-  - **Hero**: Personal tagline, quick action buttons (Projects & Resume download).
-  - **About Me**: Professional background and career focus.
+  - **Hero**: Personal greeting (*Hey, I'm Diya Poulkar*), quick action buttons (Projects & Resume download).
+  - **About Me**: Professional background, philosophy, analytical problem-solving focus, and core highlight cards.
   - **Technical Skills**: Categorized breakdown of languages, core concepts, and developer tools.
-  - **Featured Projects**: Showcase of key machine learning & web engineering projects.
-  - **Education**: Detailed academic journey with current metrics (VIT Bhopal).
-  - **Experience**: Technical leadership and industry internship history.
-  - **Contact**: Quick social links and direct email dispatch.
+  - **Featured Projects**: Highlights **Saathi — Multimodal AI Accessibility Copilot** (*2nd Runner Up in AI AGENTS TRACK for the SoCF 2.0 Hackathon*), **Smart News Assistant**, and **Smart Commute Assistant**.
+  - **Education**: Detailed academic journey with metrics (**VIT Bhopal CGPA: 9.31**).
+  - **Experience**: Technical leadership at **Linpack Club**.
+  - **Contact**: Direct email link and LinkedIn CTAs.
 
 ---
 
@@ -49,7 +49,7 @@ A modern, high-performance, white-themed developer portfolio website built with 
 **Diyaa Poulkar**  
 *Computer Science Student • Developer • Problem Solver*  
 🎓 **VIT Bhopal University** — B.Tech in Computer Science Engineering (CGPA: **9.31**)  
-💼 Core Technical Team Member at **Linpack Club**, Former Intern at **Minitek Systems**
+💼 Core Technical Team Member at **Linpack Club**
 
 ---
 
@@ -83,9 +83,7 @@ A modern, high-performance, white-themed developer portfolio website built with 
 
 ### Work & Technical Experience
 - 🌟 **Core Member – Technical Team** @ *Linpack Club, VIT Bhopal* (`May 2026 – Present`)
-  - Spearheaded frontend/web development tasks using React.js and collaborative software workflows.
-- 🏢 **Software Intern** @ *Minitek Systems India Pvt. Ltd.* (`July 2025 – August 2025`)
-  - Engaged in practical software solution workflows, algorithm design, and analytical debugging.
+  - Contributing to technical development tasks, collaborating on web projects, and building modern solutions using React.js and modern software engineering practices.
 
 ### Academic Background
 - **B.Tech in Computer Science Engineering** — *VIT Bhopal University* (`2025 – Present`) | **CGPA: 9.31**
@@ -108,7 +106,8 @@ diyaapoulkar-portfolio/
 │   ├── CursorGlow.tsx      # Interactive glowing cursor effect
 │   ├── Experience.tsx      # Work history component
 │   ├── Hero.tsx            # Main landing hero section
-│   ├── Navbar.tsx          # Fixed responsive glassmorphism navigation
+│   ├── IntroPreloader.tsx  # Palomino-style cinematic intro animation
+│   ├── Navbar.tsx          # Floating glassmorphism pill navigation bar
 │   └── Projects.tsx        # Projects showcase section
 ├── public/
 │   ├── diya.jpeg           # Developer profile image
