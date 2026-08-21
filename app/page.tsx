@@ -42,26 +42,7 @@ export default function Home() {
           variants={fadeUp}
           className="relative z-10 max-w-7xl w-full grid md:grid-cols-2 gap-12 items-center"
         >
-          {/* LEFT PROFILE IMAGE */}
-          <div className="flex justify-center md:justify-start">
-            <div className="relative group">
-              {/* Outer soft brown glow ring */}
-              <div className="absolute -inset-1.5 rounded-full bg-gradient-to-r from-amber-700 via-amber-600 to-amber-900 blur-xl opacity-30 group-hover:opacity-50 transition duration-500" />
-
-              {/* Image Container */}
-              <div className="relative w-[300px] h-[300px] md:w-[380px] md:h-[380px] rounded-full overflow-hidden border-4 border-white shadow-2xl shadow-amber-950/10">
-                <Image
-                  src="/diya.jpeg"
-                  alt="Diya Poulkar"
-                  fill
-                  className="object-cover"
-                  priority
-                />
-              </div>
-            </div>
-          </div>
-
-          {/* RIGHT HERO CONTENT */}
+          {/* LEFT HERO CONTENT */}
           <div>
             <span className="inline-block px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest bg-amber-100/90 text-amber-950 border border-amber-300/70 mb-6 shadow-sm">
               Computer Science Student • Developer • Problem Solver
@@ -95,6 +76,25 @@ export default function Home() {
               >
                 Download Resume
               </a>
+            </div>
+          </div>
+
+          {/* RIGHT PROFILE IMAGE (RBP PORTFOLIO STYLE FRAME) */}
+          <div className="flex justify-center md:justify-end">
+            <div className="relative aspect-square w-full max-w-[340px] md:max-w-[380px] overflow-hidden rounded-[2.5rem] border border-amber-900/15 bg-white p-2.5 shadow-2xl shadow-amber-950/10 hover:scale-[1.02] transition duration-500 group">
+              {/* Outer soft ambient glow */}
+              <div className="absolute -inset-2 rounded-[2.5rem] bg-gradient-to-r from-amber-700 via-amber-600 to-amber-900 blur-xl opacity-20 group-hover:opacity-40 transition duration-500 -z-10" />
+
+              {/* Image Container */}
+              <div className="relative h-full w-full overflow-hidden rounded-[2rem] border border-amber-900/10">
+                <Image
+                  src="/diya.jpeg"
+                  alt="Diya Poulkar"
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  priority
+                />
+              </div>
             </div>
           </div>
         </motion.div>
@@ -205,49 +205,126 @@ export default function Home() {
             Featured Projects
           </h2>
           <p className="text-stone-600 mt-2 text-base font-medium">
-            Recent applications and hackathon innovations
+            From AI accessibility platforms to machine learning systems, a look at the work I’m proud to have built.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">
+          {/* PRIMARY FEATURED PROJECT: SAATHI */}
+          <div className="md:col-span-2 bg-white border border-amber-900/15 rounded-[2.5rem] p-8 md:p-10 shadow-xl shadow-amber-950/5 hover:shadow-2xl hover:-translate-y-1 transition-all duration-500">
+            <div className="grid lg:grid-cols-12 gap-8 items-center">
+              {/* LEFT CONTENT */}
+              <div className="lg:col-span-7 flex flex-col justify-between h-full">
+                <div>
+                  <div className="flex items-center gap-3 mb-4 flex-wrap">
+                    <span className="px-3.5 py-1 rounded-full text-xs font-extrabold bg-amber-100 text-amber-950 border border-amber-300/80">
+                      🏆 SOFC 2.0 Hackathon Submission
+                    </span>
+                    <span className="px-3 py-1 rounded-full text-xs font-bold bg-emerald-100 text-emerald-900 border border-emerald-300/60">
+                      🟢 Live Production
+                    </span>
+                  </div>
+
+                  <h3 className="text-3xl md:text-4xl font-black text-amber-950 tracking-tight">
+                    Saathi — Multimodal AI Accessibility Copilot
+                  </h3>
+
+                  <p className="text-stone-700 mt-4 leading-relaxed text-base font-normal">
+                    A smart accessibility assistant built for university students with diverse sensory and learning needs. Features Visual Assist (Groq Llama Vision + OCR), Hearing Assist (0ms real-time subtitles), Cognitive Assist (OpenDyslexic font & focus mask), and Spoken Math/LaTeX reader in English, Hindi, and Marathi.
+                  </p>
+
+                  <div className="flex flex-wrap gap-2 mt-6">
+                    {["React 18", "Vite", "Groq AI", "Llama 3.3/3.2 Vision", "Web Speech API", "Tesseract.js"].map((tag, idx) => (
+                      <span
+                        key={idx}
+                        className="px-3.5 py-1.5 rounded-full text-xs font-semibold bg-amber-50/80 border border-amber-900/15 text-amber-950"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="mt-8 pt-6 border-t border-amber-900/10 flex gap-4 flex-wrap">
+                  <a
+                    href="https://team-sarvashrestha-diya-poulkar.vercel.app"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-7 py-3 rounded-full text-sm font-bold bg-amber-900 text-white hover:bg-amber-950 transition duration-300 shadow-md hover:scale-[1.02]"
+                  >
+                    🌐 Live Demo
+                  </a>
+
+                  <a
+                    href="https://github.com/diyaapoulkar-alt/Team-Sarvashrestha-Diya-Poulkar"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-7 py-3 rounded-full text-sm font-bold bg-white text-amber-950 border border-amber-900/20 hover:bg-amber-50/70 transition duration-300 hover:scale-[1.02]"
+                  >
+                    📦 GitHub Repo
+                  </a>
+                </div>
+              </div>
+
+              {/* RIGHT ACCESSIBILITY PROFILES CARD PREVIEW */}
+              <div className="lg:col-span-5 bg-gradient-to-br from-amber-50/90 to-amber-100/50 border border-amber-900/15 rounded-3xl p-6 flex flex-col justify-center gap-4">
+                <p className="text-xs font-extrabold uppercase tracking-widest text-amber-900">
+                  Multimodal Assistive Modules
+                </p>
+
+                <div className="grid grid-cols-2 gap-3">
+                  {[
+                    { icon: "👁️", title: "Visual Assist", desc: "Board OCR & Vision" },
+                    { icon: "🎤", title: "Hearing Assist", desc: "0ms Real-time Subtitles" },
+                    { icon: "🧠", title: "Cognitive Assist", desc: "OpenDyslexic & Focus Line" },
+                    { icon: "📐", title: "Math Reader", desc: "LaTeX Spoken Phonetics" },
+                  ].map((mod, idx) => (
+                    <div
+                      key={idx}
+                      className="bg-white/90 border border-amber-900/10 rounded-2xl p-3.5 shadow-sm"
+                    >
+                      <span className="text-2xl">{mod.icon}</span>
+                      <h4 className="text-sm font-bold text-amber-950 mt-1">
+                        {mod.title}
+                      </h4>
+                      <p className="text-xs text-stone-600 mt-0.5">
+                        {mod.desc}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* SECONDARY PROJECTS */}
           {[
             {
-              title: "Saathi — Multimodal AI Accessibility Copilot",
-              badge: "SOFC 2.0 Hackathon Submission",
-              desc: "A smart AI accessibility copilot for students with sensory & learning needs. Integrates Visual Assist (Groq Llama Vision + OCR), Hearing Assist (0ms real-time subtitles), Cognitive Assist (OpenDyslexic font & focus mask), and Spoken Math/LaTeX reader in English, Hindi, and Marathi.",
-              tags: ["React 18", "Vite", "Groq AI", "Llama 3.3/3.2", "Web Speech API"],
-              liveUrl: "https://team-sarvashrestha-diya-poulkar.vercel.app",
-              githubUrl: "https://github.com/diyaapoulkar-alt/Team-Sarvashrestha-Diya-Poulkar",
-            },
-            {
               title: "Smart News Assistant",
+              icon: "📰",
               desc: "AI-based system that fetches and summarizes news using APIs with intelligent filtering, sentiment categorization, and clean UX.",
               tags: ["Python", "APIs", "NLP"],
             },
             {
               title: "Smart Commute Assistant",
+              icon: "🚗",
               desc: "Machine learning-based travel time prediction system using live travel datasets, APIs, and regression modeling.",
               tags: ["Python", "Machine Learning", "Travel APIs"],
             },
           ].map((project, i) => (
             <div
               key={i}
-              className={`bg-white border border-amber-900/10 rounded-3xl p-8 shadow-lg shadow-amber-950/5 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between ${
-                i === 0 ? "md:col-span-2" : ""
-              }`}
+              className="bg-white border border-amber-900/10 rounded-[2rem] p-8 shadow-lg shadow-amber-950/5 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between"
             >
               <div>
-                {project.badge && (
-                  <span className="inline-block px-3.5 py-1 mb-4 rounded-full text-xs font-extrabold bg-amber-100/90 text-amber-950 border border-amber-300/80">
-                    {project.badge}
-                  </span>
-                )}
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="text-3xl">{project.icon}</span>
+                  <h3 className="text-2xl font-black text-amber-950">
+                    {project.title}
+                  </h3>
+                </div>
 
-                <h3 className="text-2xl md:text-3xl font-black text-amber-950">
-                  {project.title}
-                </h3>
-
-                <p className="text-stone-700 mt-4 leading-relaxed text-base font-normal">
+                <p className="text-stone-700 leading-relaxed text-base font-normal">
                   {project.desc}
                 </p>
 
@@ -264,32 +341,6 @@ export default function Home() {
                   </div>
                 )}
               </div>
-
-              {(project.liveUrl || project.githubUrl) && (
-                <div className="mt-8 pt-6 border-t border-amber-900/10 flex gap-3 flex-wrap">
-                  {project.liveUrl && (
-                    <a
-                      href={project.liveUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="px-6 py-2.5 rounded-full text-sm font-bold bg-amber-900 text-white hover:bg-amber-950 transition duration-300 shadow-md hover:scale-[1.02]"
-                    >
-                      🌐 Live Demo
-                    </a>
-                  )}
-
-                  {project.githubUrl && (
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="px-6 py-2.5 rounded-full text-sm font-bold bg-white text-amber-950 border border-amber-900/20 hover:bg-amber-50/70 transition duration-300 hover:scale-[1.02]"
-                    >
-                      📦 GitHub Repo
-                    </a>
-                  )}
-                </div>
-              )}
             </div>
           ))}
         </div>
