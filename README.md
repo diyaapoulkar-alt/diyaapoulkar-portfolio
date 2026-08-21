@@ -1,5 +1,6 @@
 # 🌐 Diyaa Poulkar — Personal Portfolio Website
 
+[![Live Demo](https://img.shields.io/badge/Live_Demo-diyaapoulkar--portfolio.vercel.app-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://diyaapoulkar-portfolio.vercel.app/)
 [![Next.js](https://img.shields.io/badge/Next.js-16.2.6-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React-19.2.4-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
@@ -7,6 +8,8 @@
 [![Framer Motion](https://img.shields.io/badge/Framer_Motion-12.40-0055FF?style=for-the-badge&logo=framer&logoColor=white)](https://www.framer.com/motion/)
 
 A modern, high-performance, dark-themed developer portfolio website built with **Next.js 16 (App Router)**, **React 19**, **TypeScript**, **Tailwind CSS v4**, and **Framer Motion**. Features responsive design, glassmorphism UI cards, smooth page scroll, and custom cursor lighting effects.
+
+🚀 **Live Portfolio Website**: [https://diyaapoulkar-portfolio.vercel.app](https://diyaapoulkar-portfolio.vercel.app/)
 
 ---
 
@@ -142,6 +145,7 @@ npm run start
 
 ## 📬 Connect & Contact
 
+- **Live Website**: [diyaapoulkar-portfolio.vercel.app](https://diyaapoulkar-portfolio.vercel.app/)
 - **Email**: [diyaapoulkar@gmail.com](mailto:diyaapoulkar@gmail.com)
 - **LinkedIn**: [linkedin.com/in/diya-poulkar-05721037a](https://www.linkedin.com/in/diya-poulkar-05721037a/)
 - **GitHub**: [@diyaapoulkar-alt](https://github.com/diyaapoulkar-alt)
