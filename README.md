@@ -53,12 +53,24 @@ A modern, high-performance, dark-themed developer portfolio website built with *
 
 ## 🚀 Featured Projects
 
-### 📰 1. Smart News Assistant
+### ♿ 1. Saathi — Multimodal AI Accessibility Copilot *(SOFC 2.0 Hackathon Submission)*
+- **Overview**: A smart AI accessibility copilot built to support university students with diverse sensory & learning needs.
+- **Key Features**:
+  - 👁️ **Visual Assist**: Blackboard photo & note image analysis using Groq Llama 3.2 Vision + Canvas OCR for screen readers.
+  - 🎤 **Hearing Assist**: Zero-latency (`0ms`) real-time speech-to-text subtitles in high-contrast typography with transcript export.
+  - 🧠 **Cognitive Assist**: 5th-grade text simplifier with OpenDyslexic font toggle & focus reading line guide.
+  - 📐 **Math & LaTeX Reader**: Converts complex LaTeX formulas into spoken natural English phonetics and symbol breakdowns.
+  - 👩‍🏫 **Saathi AI Studio (Prof. Sunshine)**: Interactive AI lady educator for 1-click pop quizzes, voice tutoring, and concept explanations.
+  - 🌐 **Multilingual Support**: 1-click dynamic full-site translation across English, Hindi, and Marathi.
+- **Tech Stack**: React 18, Vite 8, Groq Cloud REST API (`Llama-3.3-70b`, `Llama-3.2-11b Vision`), Web Speech API, Tesseract.js, Vercel.
+- **Links**: 🌐 [Live Production Web App](https://team-sarvashrestha-diya-poulkar.vercel.app) | 📦 [GitHub Repository](https://github.com/diyaapoulkar-alt/Team-Sarvashrestha-Diya-Poulkar)
+
+### 📰 2. Smart News Assistant
 - **Overview**: An AI-based news aggregation & summarization platform.
 - **Key Features**: Fetches real-time headlines using external APIs, applies intelligent summary filtering, and presents news through a minimal, user-focused UI.
 - **Tech Stack**: Python, APIs, Natural Language Processing / AI models.
 
-### 🚗 2. Smart Commute Assistant
+### 🚗 3. Smart Commute Assistant
 - **Overview**: Machine learning-based travel time prediction and navigation routing tool.
 - **Key Features**: Leverages regression algorithms and live travel datasets to predict transit times and optimize commute routes.
 - **Tech Stack**: Python, Machine Learning (Regression Models), Travel APIs.

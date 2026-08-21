@@ -233,19 +233,30 @@ export default function Home() {
 
           {[
             {
+              title: "Saathi — Multimodal AI Accessibility Copilot",
+              badge: "SOFC 2.0 Hackathon Submission",
+              desc: "A smart AI accessibility copilot for students with sensory & learning needs. Integrates Visual Assist (Groq Llama Vision + OCR), Hearing Assist (0ms real-time subtitles), Cognitive Assist (OpenDyslexic font & focus mask), and Spoken Math/LaTeX reader in English, Hindi, and Marathi.",
+              tags: ["React 18", "Vite", "Groq AI", "Llama 3.3/3.2", "Web Speech API"],
+              liveUrl: "https://team-sarvashrestha-diya-poulkar.vercel.app",
+              githubUrl: "https://github.com/diyaapoulkar-alt/Team-Sarvashrestha-Diya-Poulkar",
+              color: "from-emerald-500 via-teal-500 to-cyan-500",
+            },
+            {
               title: "Smart News Assistant",
               desc: "AI-based system that fetches and summarizes news using APIs with intelligent filtering and clean UX.",
+              tags: ["Python", "APIs", "NLP"],
               color: "from-purple-500 to-pink-500",
             },
             {
               title: "Smart Commute Assistant",
               desc: "Machine learning-based travel time prediction system using APIs, regression models, and real-world datasets.",
+              tags: ["Python", "Machine Learning", "Travel APIs"],
               color: "from-blue-500 to-cyan-500",
             },
           ].map((project, i) => (
             <div
               key={i}
-              className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl p-7 hover:scale-[1.03] transition duration-300"
+              className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl p-7 hover:scale-[1.02] transition duration-300 flex flex-col justify-between"
             >
 
               <div
@@ -254,15 +265,61 @@ export default function Home() {
 
               <div className="relative z-10">
 
+                {project.badge && (
+                  <span className="inline-block px-3 py-1 mb-3 rounded-full text-xs font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+                    {project.badge}
+                  </span>
+                )}
+
                 <h3 className="text-2xl font-semibold">
                   {project.title}
                 </h3>
 
-                <p className="text-gray-300 mt-4 leading-relaxed">
+                <p className="text-gray-300 mt-4 leading-relaxed text-sm md:text-base">
                   {project.desc}
                 </p>
 
+                {project.tags && (
+                  <div className="flex flex-wrap gap-2 mt-5">
+                    {project.tags.map((tag, idx) => (
+                      <span
+                        key={idx}
+                        className="px-3 py-1 rounded-full text-xs bg-black/50 border border-white/10 text-gray-300"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                )}
+
               </div>
+
+              {(project.liveUrl || project.githubUrl) && (
+                <div className="relative z-10 mt-7 flex gap-3 flex-wrap">
+                  {project.liveUrl && (
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-5 py-2 rounded-full text-sm font-medium bg-gradient-to-r from-emerald-500 to-cyan-500 hover:scale-105 transition shadow-lg shadow-emerald-500/20 text-white"
+                    >
+                      🌐 Live Demo
+                    </a>
+                  )}
+
+                  {project.githubUrl && (
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-5 py-2 rounded-full text-sm font-medium border border-white/20 hover:bg-white/10 transition text-gray-300 hover:text-white"
+                    >
+                      📦 GitHub Repo
+                    </a>
+                  )}
+                </div>
+              )}
+
             </div>
           ))}
 
