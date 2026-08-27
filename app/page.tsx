@@ -72,6 +72,8 @@ export default function Home() {
 
               <a
                 href="/diya_poulkar_resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-7 py-3.5 rounded-full bg-white hover:bg-amber-50/60 text-amber-950 font-semibold border border-amber-900/20 transition duration-300 shadow-sm hover:scale-[1.03]"
               >
                 Download Resume
