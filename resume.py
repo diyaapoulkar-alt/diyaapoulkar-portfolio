@@ -107,15 +107,15 @@ def build_pdf():
     # 2. Contact Info - Black Font with Active Clickable Links
     story.append(Paragraph("Nashik, Maharashtra &nbsp;|&nbsp; diyaapoulkar@gmail.com &nbsp;|&nbsp; +91 8080332392", contact_style))
     story.append(Paragraph(
-        "Portfolio: <a href='https://diyaapoulkar-portfolio.vercel.app/' color='#0284C7'>diyaapoulkar-portfolio.vercel.app</a> &nbsp;|&nbsp; "
-        "LinkedIn: <a href='https://www.linkedin.com/in/diya-poulkar-05721037a/' color='#0284C7'>linkedin.com/in/diya-poulkar</a> &nbsp;|&nbsp; "
-        "GitHub: <a href='https://github.com/diyaapoulkar-alt' color='#0284C7'>github.com/diyaapoulkar-alt</a>",
+        "Portfolio: <a href='https://diyaapoulkar-portfolio.vercel.app/' color='#B45309'>diyaapoulkar-portfolio.vercel.app</a> &nbsp;|&nbsp; "
+        "LinkedIn: <a href='https://www.linkedin.com/in/diya-poulkar-05721037a/' color='#B45309'>linkedin.com/in/diya-poulkar</a> &nbsp;|&nbsp; "
+        "GitHub: <a href='https://github.com/diyaapoulkar-alt' color='#B45309'>github.com/diyaapoulkar-alt</a>",
         contact_style
     ))
 
     # 3. Straight Horizontal Divider Line Above CAREER OBJECTIVE
     story.append(Spacer(1, 4))
-    story.append(HRFlowable(width="100%", thickness=1.5, color=COLOR_BLACK, spaceBefore=3, spaceAfter=6))
+    story.append(HRFlowable(width="100%", thickness=1.5, color=COLOR_ACCENT, spaceBefore=3, spaceAfter=6))
 
     # 4. Career Objective
     story.append(Paragraph("CAREER OBJECTIVE", section_heading))
